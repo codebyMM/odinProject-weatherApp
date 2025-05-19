@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1746937807433-05748b80caf4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image ease-out .5s;
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 3fr 1.5fr;
+    position: relative;
+}
+
+.left-container {
+    padding: 3rem 4rem;
+    position: relative;
+    height: 100%;
+    color: #fff;
+}
+
+
+.day-data {
+    font-weight: 400;
+    font-size: 1.5em;
+    margin-bottom: -10px;
+}
+
+.date-data {
+    font-size: 1.7em;
+    font-weight: 500;
+}
+
+.left-container div:last-of-type {
+    position: absolute;
+    bottom: 12vh;
+}
+
+.weather-description {
+    margin-top: 4rem;
+    font-weight: 600;
+    font-size: 1.9em;
+}
+
+.temperature {
+    font-size: 12em;
+    font-weight: 500;
+    margin-left: -15px;
+    margin-bottom: -60px;
+}
+
+.right-container {
+    background: rgba(255, 255, 255, 0.556);
+    padding: 3rem 4rem;
+}
+
+.search-container {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#btnSearch,
+.search-container input {
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+}
+
+.search-container input {
+    width: 80%;
+    padding: .5rem .6rem;
+    background: transparent;
+    border: 2px solid #000;
+}
+
+#btnSearch {
+    width: 18%;
+    cursor: pointer;
+    background-image: linear-gradient(30deg, #3bb9ef, #f43202);
+    color: #fff;
+    font-weight: 600;
+}
+
+.upcoming-weathers {
+    padding: 1rem;
+    border: 2px solid rgb(137, 137, 137);
+    border-radius: 2px;
+}
+
+.upcoming-weathers h4 {
+    margin-bottom: 1rem;
+}
+
+.day {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 4px solid #8a8a8a;
+    padding-bottom: .3rem;
+    margin-bottom: 1rem;
+}
+
+.day:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.upcoming-description {
+    font-size: 1.1em;
+    margin-bottom: -10px;
+}
+
+.upcoming-temperature {
+    font-size: 2.5em;
+    margin-bottom: -10px;
+}
+
+.city {
+    font-size: 1.3em;
+    margin-left: -5px;
+}
+
+.loading {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(226, 226, 226, 0.91);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.loading.hide {
+    display: none;
+}
